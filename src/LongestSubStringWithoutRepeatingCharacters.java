@@ -11,14 +11,10 @@ import java.util.Set;
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 public class LongestSubStringWithoutRepeatingCharacters {
-	
-	public static void main(String[] args){
-		System.out.println(lengthOfLongestSubString("abcdaefaghij"));
-	}
 
-	public static int lengthOfLongestSubString(String s){
+	public int lengthOfLongestSubString(String s){
 		int i = 0, j = 0, max = 0;
-	    Set<Character> set = new HashSet<>();
+	    Set<Character> set = new HashSet<Character>();
 
 	    while (j < s.length()) {
 	        if (!set.contains(s.charAt(j))) {
