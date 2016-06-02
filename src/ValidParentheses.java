@@ -7,36 +7,32 @@ import java.util.Stack;
 
 public class ValidParentheses {
 
-	public boolean isValidParen(String s){
+	public boolean isValidParen(String s) {
 		Stack<Character> stack = new Stack<Character>();
-        for(int i = 0; i < s.length(); i++){
-            if(s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{'){
-                                stack.push(s.charAt(i));
-            }
-            else if(s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']'){
-                if(stack.isEmpty()){
-                    return false;
-                }
-                else if(s.charAt(i) == ')'){
-                    char c = stack.pop();
-                    if(c != '(')
-                        return false;
-                }
-                else if(s.charAt(i) == '}'){
-                    char c = stack.pop();
-                    if(c != '{')
-                        return false;
-                }
-                else if(s.charAt(i) == ']'){
-                    char c = stack.pop();
-                    if(c != '[')
-                        return false;
-                }
-            }
-        }
-        if(stack.isEmpty())
-            return true;
-        else
-            return false;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{') {
+				stack.push(s.charAt(i));
+			} else if (s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']') {
+				if (stack.isEmpty()) {
+					return false;
+				} else if (s.charAt(i) == ')') {
+					char c = stack.pop();
+					if (c != '(')
+						return false;
+				} else if (s.charAt(i) == '}') {
+					char c = stack.pop();
+					if (c != '{')
+						return false;
+				} else if (s.charAt(i) == ']') {
+					char c = stack.pop();
+					if (c != '[')
+						return false;
+				}
+			}
+		}
+		if (stack.isEmpty())
+			return true;
+		else
+			return false;
 	}
 }
