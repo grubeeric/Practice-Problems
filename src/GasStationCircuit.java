@@ -5,7 +5,7 @@
  * ex: gas[] = {1, 2, 3, 4, 5}
  *     cost[] = {1, 3, 2, 4, 5}
  *     
- *     would return '2', as that is the first station you could start at
+ *     would return '2', as that index is the first station you could start at
  *     and make it through all of the stations without running out of gas
  */
 
