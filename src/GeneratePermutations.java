@@ -2,7 +2,7 @@
 public class GeneratePermutations {
 
 	public static void main(String[] args){
-		generatePermutation("abcd");
+		generatePermutation("abcdef");
 	}
 	
 	public static void generatePermutation(String str){
