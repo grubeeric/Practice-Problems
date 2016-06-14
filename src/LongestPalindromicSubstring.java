@@ -1,7 +1,11 @@
 
 public class LongestPalindromicSubstring {
 	
-	public String longestPalindrome(String s){
+	public static void main(String[] args){
+		System.out.println(longestPalindrome("kjdfjracecarmlno"));
+	}
+	
+	public static String longestPalindrome(String s){
 		if(s.isEmpty())
 			return null;
 		if(s.length() == 1)
@@ -21,7 +25,7 @@ public class LongestPalindromicSubstring {
 		return longest;
 	}
 	
-	public String helper(String s, int begin, int end){
+	public static String helper(String s, int begin, int end){
 		while(begin >= 0 && end <= s.length() - 1 && s.charAt(begin) == s.charAt(end)){
 			begin--;
 			end++;
