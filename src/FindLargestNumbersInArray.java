@@ -3,7 +3,7 @@ import java.util.PriorityQueue;
 public class FindLargestNumbersInArray {
 
 	public static void main(String[] args){
-		int[] nums = {9, 8, 1, 4, 3, 2, 6, 7, 10, 12, 14, 22};
+		int[] nums = {9, 8, 101, 4, 3, 2, 6, 7, 10, 12, 14, 22, 100};
 		PriorityQueue<Integer> queue = findKLargestNumbersInArray(nums, 5);
 		
 		while(!queue.isEmpty()){
