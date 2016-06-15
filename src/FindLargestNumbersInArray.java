@@ -14,14 +14,14 @@ public class FindLargestNumbersInArray {
 	public static PriorityQueue<Integer> findKLargestNumbersInArray(int[] nums, int k){
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
 		for(int i = 0; i < nums.length; i++){
-			queue.offer(nums[i]);
-		}
-		
-		int size = queue.size();
-		
-		while(size > k){
-			queue.poll();
-			size--;
+			if(queue.size() < k){
+				queue.offer(nums[i]);
+			}else{
+				if(nums[i] >= queue.peek()){
+					queue.poll();
+					queue.offer(nums[i]);
+				}
+			}
 		}
 		
 		return queue;
